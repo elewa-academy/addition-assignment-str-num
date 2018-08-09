@@ -99,6 +99,6 @@ function trace() {
 	var sf_v = document.getElementById("sf-v");
 	sf_v.value = sf;
 
-	console.assert(a === ex_a, ["a", {actual: a}, {expected: ex_a}] );
-	console.assert(sf === ex_res, ["result", {actual: sf}, {expected: ex_res}] );
+	console.log(["a", {actual: a}, {expected: ex_a}] );
+	console.log(["result", {actual: sf}, {expected: ex_res}] );
 };
