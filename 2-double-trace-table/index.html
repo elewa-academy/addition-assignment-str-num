@@ -18,19 +18,21 @@
 	<script src="scripts/trace.js"></script>
 
 
-	<!-- ( (a += String( a += b)) % c ) , ((a += String( a += b)) % c);  -->
+	<!-- ((a += String( a += b)) % c ) , ((a += String( a += b)) % c);  -->
 	<div class="navbar">
 	  <a>(((</a>
 	  <a>a +=</a>
 	  <a>String(</a>
 	  <a>a += b</a>
 	  <a>))</a>
+	  <a>%c )</a>
 	  <a>,</a>
 	  <a>((</a>
 	  <a>a +=</a>
 	  <a>String(</a>
 	  <a>a += b</a>
-	  <a>)))</a>
+	  <a>))</a>
+	  <a>%c )</a>
 	  <a>;</a>
 	</div>
 	
