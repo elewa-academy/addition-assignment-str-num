@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+    <head>
+        <title>part-task</title>
+        
+        <link rel="stylesheet" href="./navbar.css">
+
+        <script src="./exercises/be-the-plus-equals.js"></script>
+        <script src="./exercises/modulo.js"></script>
+        <script src="./exercises/why-two-is-one.js"></script>
+
+        <!-- the scripts that make parsons work -->
+        <link href="./utils/parsons.css" rel="stylesheet" />
+        <link href="./utils/lib/prettify.css" rel="stylesheet" />
+        <script src="./utils/lib/prettify.js"></script>
+        <script src="./utils/include.js"></script>
+        <script src="./utils/lib/jquery.min.js"></script>
+        <script src="./utils/lib/jquery-ui.min.js"></script>
+        <script src="./utils/lib/jquery.ui.touch-punch.min.js"></script>
+        <script src="./utils/lib/underscore-min.js"></script>
+        <script src="./utils/lib/lis.js"></script>
+        <script src="./utils/parsons.js"></script>
+        <script src='./utils/index.js'></script>
+    </head>
+    <body>
+
+        <div class="navbar">
+            <a>(</a>
+            <a>a +=</a>
+            <a>String(</a>
+            <a>a += b</a>
+            <a>)</a>
+            <a>)</a>
+            <a>% c</a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div>
+            <div name="parsons-boxes">
+                <!-- modify this line's id -->
+                <div id="shuffled-let-vs-var" name="shuffled" class="sortable-code"></div>
+                <!-- modify this line's id -->
+                <div id="sorted-let-vs-var" name="sorted" class="sortable-code"></div> 
+                <div style="clear:both;"></div>
+            </div>
+
+            <div name="parsons-buttons">
+                <!-- modify this line's id -->
+                <a href="#" id="reshuffle-let-vs-var" name="reshuffle">Re-Shuffle</a>
+                <!-- modify this line's id -->
+                <a href="#" id="feedback-let-vs-var" name="feedback">Get feedback</a>
+            </div>
+            <script>
+                // define your challenge here
+                config = {};
+
+                config.shuffled_id = "shuffled-let-vs-var";
+                config.sorted_id = "sorted-let-vs-var";
+                config.reshuffle_id = "reshuffle-let-vs-var";
+                config.feedback_id = "feedback-let-vs-var";
+                config.challenge = 
+                        "let input = 0;\n" +
+                        "(input += String( input += 1)) % 6; \n" +
+                        "    // input: (number, 0) \n" +
+                        "    input += 1; \n" +
+                        "    // input: (number, 1) \n" +
+                        "    String(1); \n" +
+                        "    // (string, '1') \n" +
+                        "    input += '1'; \n" +
+                        "    // input: (string, '11') \n" +
+                        "    input % 6; \n" +
+                        "    // (number, 5) \n" +
+                        "    // input: (number, 2) #distractor";
+
+
+                init_section(config);
+            </script>
+            <br>
+        </div>
+        <hr>
+        <a href="http://elewa.education/blog" target="_blank"><img src="https://user-images.githubusercontent.com/18554853/34921062-506450ae-f97d-11e7-875f-6feeb26ad72d.png" width="150" height="60"/></a>
+        <br>
+        <br>
+    </body>
+</html>
